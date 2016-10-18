@@ -176,3 +176,43 @@ Le fichier de configuration `galaxy.ini`  est organisé en sections permettant d
 - Cette section commence par le marqueur `[app:main]`
 - Cette section contient l’ensemble des paramètres de fonctionnement de Galaxy (chemin, répertoires, bases de données, authentification des utilisateurs, sécurité, etc.)
 - Elle définit également la localisation des fichiers de configuration annexes
+
+---
+
+template: title
+
+# Configuration
+
+### Les handlers
+
+---
+
+template: content
+
+# Les handlers
+
+Galaxy est une application Web qui utilise des gestionnaires ou handlers pour effectuer des actions.
+
+Il existe deux grands types d'actions qui sont réalisées par les handlers :
+- Répondre aux requêtes des utilisateurs ; ces actions sont effectuées par des web handlers
+- Gérer l’exécution des outils ; ces actions sont effectuées par les job handlers.
+
+Par défaut, Galaxy est configuré pour exécuter un seul gestionnaire qui gère les requêtes utilisateurs et les jobs.
+
+Selon le nombre d'utilisateurs accédant à votre instance Galaxy ou le nombre de jobs que vous devez gérer vous pourriez avoir besoin de lancer des web handlers ou des jobs handlers supplémentaires.
+
+---
+
+# Les handlers
+
+Pour une instance Galaxy classique on déclare au moins un handler dédié à l’execution des jobs. Ceci nous permettra notamment de séparer les informations de log spécifiques à l’exécution des outils, des informations concernant les actions de l’utilisateur sur l’interface web de Galaxy.
+
+Si votre instance Galaxy tourne toujours, arrêtez-la avec la séquence de touche `Ctrl+c`
+
+---
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
