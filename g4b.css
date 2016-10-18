@@ -29,3 +29,7 @@ h1, h2, h3 {
   font-size: 80%;
   color: grey;
 }
+
+.smaller-font { font-size:14px }
+
+.bigger { font-size: 150%; }
