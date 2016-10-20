@@ -200,6 +200,72 @@ template: title
 
 # Configuration
 
+### Se donner les droits administrateur
+
+---
+
+layout: true
+template: content
+
+# Se donner les droits administrateur
+
+---
+
+### Création d'un compte utilisateur
+
+Depuis l’interface web de Galaxy, créez-vous un compte en cliquant sur le menu **User** puis **Register**.
+
+.callout.callout-info[
+#### A noter
+Galaxy attend une adresse mail comme login.
+]
+
+.center[![Erreur d'exécution](images/user-menu.png)]
+
+---
+
+Les administrateurs d’une instance Galaxy sont déclarés dans le fichier `galaxy.ini`
+
+```ini
+admin_users = prenom.nom@domaine.fr
+```
+
+.callout.callout-info[
+- Il s’agit du mail Galaxy
+- Il est possible d’ajouter plusieurs administrateurs en séparant les mails par des virgules.
+- Il est nécessaire de relancer Galaxy pour que ces modifications soient prises en compte.
+]
+
+---
+
+template: content
+# Interface d'administration
+
+.row[
+.col-md-4[
+- Visualisation des data types et data tables
+- Gestion des jobs en cours
+
+- Installation d’outil via toolshed
+- Relance d’un outil individuel après modification du wrapper XML d’un outil
+
+- Gestion des utilisateurs, groupes et rôles
+
+- Gestion des données et des librairies partagées
+
+- Gestion des quotas d’espace disque
+]
+.col-md-8[
+.image[![Interface d'administration](images/administration.png)]
+]
+]
+
+---
+
+template: title
+
+# Configuration
+
 ### Les handlers
 
 ---
@@ -1040,72 +1106,6 @@ template: title
 
 # Configuration
 
-### Se donner les droits administrateur
-
----
-
-layout: true
-template: content
-
-# Se donner les droits administrateur
-
----
-
-### Création d'un compte utilisateur
-
-Depuis l’interface web de Galaxy, créez-vous un compte en cliquant sur le menu **User** puis **Register**.
-
-.callout.callout-info[
-#### A noter
-Galaxy attend une adresse mail comme login.
-]
-
-.center[![Erreur d'exécution](images/user-menu.png)]
-
----
-
-Les administrateurs d’une instance Galaxy sont déclarés dans le fichier `galaxy.ini`
-
-```ini
-admin_users = prenom.nom@domaine.fr
-```
-
-.callout.callout-info[
-- Il s’agit du mail Galaxy
-- Il est possible d’ajouter plusieurs administrateurs en séparant les mails par des virgules.
-- Il est nécessaire de relancer Galaxy pour que ces modifications soient prises en compte.
-]
-
----
-
-template: content
-# Interface d'administration
-
-.row[
-.col-lg-4[
-- Visualisation des data types et data tables
-- Gestion des jobs en cours
-
-- Installation d’outil via toolshed
-- Relance d’un outil individuel après modification du wrapper XML d’un outil
-
-- Gestion des utilisateurs, groupes et rôles
-
-- Gestion des données et des librairies partagées
-
-- Gestion des quotas d’espace disque
-]
-.col-lg-8[
-.image[![Interface d'administration](images/administration.png)]
-]
-]
-
----
-
-template: title
-
-# Configuration
-
 ### Gestion des groupes et des quotas
 
 ---
@@ -1257,7 +1257,7 @@ Le serveur de rapport dipose de son propre fichier de log : `reports_webapp.log`
 ### Les statistiques consultables
 
 .row[
-.col-lg-4[
+.col-md-4[
 
 ** Jobs **
 
@@ -1271,14 +1271,14 @@ Le serveur de rapport dipose de son propre fichier de log : `reports_webapp.log`
 - Jobs per tool
 - Errors per tool
 ]
-.col-lg-4[
+.col-md-4[
 
 ** Workflows **
 
 - Workflows per month
 - Workflows per user
 ]
-.col-lg-4[
+.col-md-4[
 
 ** Users **
 
