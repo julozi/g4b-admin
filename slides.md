@@ -971,9 +971,15 @@ template: content
 
 ---
 
-### Déclarez deux handlers web
+### Arrêtez votre instance Galaxy
 
-Editez votre fichier `galaxy.ini` et commentez la section correspondant au [server:main]
+```shell
+[galaxy]$ GALAXY_RUN_ALL=1 ./run.sh --stop-daemon
+```
+
+### Commentez le handler web par défaut
+
+Editez votre fichier `galaxy.ini` et commentez la section correspondant au `[server:main]`
 
 ```ini
 # [server:main]
@@ -1223,7 +1229,7 @@ Galaxy intègre une application web permettant de consulter les statistiques d'u
 Copiez le fichier de configuration dédié au reporting
 
 ```shell
-[galaxy]$ cp config/reports_wsgi.ini.sample  config/reports_wsgi.ini
+[galaxy]$ cp config/reports.ini.sample  config/reports.ini
 ```
 
 Le serveur de rapport écoute sur le port 9001 par défaut
@@ -1243,7 +1249,7 @@ database_connection = postgresql://galaxy:azerty@localhost/galaxy
 ```
 
 .callout.callout-info[
-Le serveur de rapport dipose de son propre fichier de log : `reports_webapp.log`
+Le serveur de rapport dispose de son propre fichier de log : `reports_webapp.log`
 ]
 
 ### Arrêt du serveur de rapport
